@@ -4,12 +4,17 @@ using UnityEngine.SceneManagement;
 public class Portal : MonoBehaviour
 {
     public string nextLevelName;
+    public PlayerController playerController; 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("BigPlayer") || other.CompareTag("SmallPlayer"))
+        if (playerController != null && playerController.isCombined)
         {
             LoadNextLevel();
+        }
+        else
+        {
+            Debug.Log("Cannot transition: Player is not in combined mode.");
         }
     }
 

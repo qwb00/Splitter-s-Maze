@@ -138,6 +138,10 @@ PrefabInstance:
       propertyPath: nextLevelName
       value: Level2
       objectReference: {fileID: 0}
+    - target: {fileID: 5699110552277220623, guid: 99c25bda3f3f9ad4f9f0aa76ed49560a, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 1043086893}
     - target: {fileID: 6337195900946009140, guid: 99c25bda3f3f9ad4f9f0aa76ed49560a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.481
@@ -244,7 +248,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.420984
+  orthographic size: 9.158615
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -269,7 +273,7 @@ Transform:
   m_GameObject: {fileID: 148357723}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6087999, y: -0.15, z: -10}
+  m_LocalPosition: {x: -1.6087999, y: 0.47, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
