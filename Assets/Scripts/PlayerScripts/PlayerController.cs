@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -113,6 +114,16 @@ public class PlayerController : MonoBehaviour
                 {
                     EnterTossMode();
                 }
+
+                if (Input.GetKeyDown(KeyCode.P))
+                {
+                    ReloadLevel();
+                }
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    ReturnToMainMenu();
+                }
             }
             else
             {
@@ -132,6 +143,16 @@ public class PlayerController : MonoBehaviour
                         CombinePlayers();
                     }
                 }
+
+                if (Input.GetKeyDown(KeyCode.P))
+                {
+                    ReloadLevel();
+                }
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    ReturnToMainMenu();
+                }
             }
         }
         else
@@ -150,6 +171,17 @@ public class PlayerController : MonoBehaviour
                 ExitTossMode();
             }
         }
+    }
+
+    void ReloadLevel()
+    {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentSceneName);
+    }
+
+    void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     void HandleBigMovement()
